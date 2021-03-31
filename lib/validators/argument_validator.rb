@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This class validates an arguments from CLI
 class ArgumentValidator
   ARGUMENT_EMPTY = 'No file added'
   FILE_NOT_EXISTS = 'File does not exists'

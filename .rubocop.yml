@@ -1,0 +1,38 @@
+require: rubocop-rspec
+
+Layout/LineLength:
+  Max: 120
+
+Metrics/AbcSize:
+  Max: 25
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Layout/EndOfLine:
+  Enabled: False
+
+Style/StringLiterals:
+  Exclude:
+    - 'spec/integrations/integrations_spec.rb'
+
+Style/MixinUsage:
+  Exclude:
+    - 'bin/process_file'
+
+RSpec/RepeatedDescription:
+  Exclude:
+    - 'spec/integrations/integrations_spec.rb'
+
+RSpec/ExampleLength:
+  Exclude:
+    - 'spec/integrations/integrations_spec.rb'
+
+RSpec/MultipleExpectations:
+  Exclude:
+    - 'spec/integrations/integrations_spec.rb'
+
+RSpec/DescribeClass:
+  Exclude:
+    - 'spec/integrations/integrations_spec.rb'

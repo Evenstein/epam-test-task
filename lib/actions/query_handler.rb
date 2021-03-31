@@ -15,10 +15,9 @@ class QueryHandler
 
   def process_line(line)
     query, ip = line.split(' ')
+    return unless QueryValidator.valid?(query) && IpValidator.valid?(ip)
 
-    if QueryValidator.valid?(query) && IpValidator.valid?(ip)
-      query_line = Line.new(query, ip)
-      @history.log_history(query_line) if query_line.query && query_line.ip
-    end
+    query_line = Line.new(query, ip)
+    @history.log_history(query_line) if query_line.query && query_line.ip
   end
 end
