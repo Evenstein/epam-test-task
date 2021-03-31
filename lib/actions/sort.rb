@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# This module provides methods for sorting
 module Sort
   def sort_by_count(hash)
     hash.sort_by { |_k, value| value.size }.reverse.to_h
